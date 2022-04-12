@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>this is thymeleafexample</h1>
+<h2 th:text="${name}"></h2>
+<h3 th:text="${currentDate}"></h3>
+<h4>Name of the developer is <span th:text="${name}"></span></h4>
+<h5 th:text="${#strings.toUpperCase(name)}"></h5>
+<p>length of name is <span th:text="${#strings.length(name)}"></span></p>
+
+<div th:with="a=5,b=10,n=${name}">
+<h1>value of a is<span th:text="${a}"></span></h1>
+<h2 th:text="'value of b is '+${b}"></h2>
+<h3>the local value of n is <span th:text="${n}"></span></h3>
+
+<h1 th:text="'sum of '+${a}+' and '+${b}+' is '+${a+b}"></h1>
+</div>
+
+</body>
+</html>

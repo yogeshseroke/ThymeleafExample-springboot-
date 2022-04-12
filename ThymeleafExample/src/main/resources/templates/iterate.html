@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Going to traverse elements in collection...</h1>
+<h2 th:text="${naam}"></h2>
+<h1>
+<ul>
+<li th:each="n,status:${naam}">
+<span th:text="${n}"></span>
+
+<span th:text="${status.index}+' '+${n}"></span>
+
+<span th:style="${status.odd} ? 'font-weight:bold' : ' ' " th:text="${status.index}+' '+${n}"></span>
+
+</li>
+</ul>
+</h1>
+</body>
+</html>
